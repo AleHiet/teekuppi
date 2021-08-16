@@ -1,0 +1,65 @@
+public class Laskenta {
+    
+    public static void main(String[] args) {
+        java.util.Scanner reader = new java.util.Scanner(System.in);        
+
+        int valinta = 0;
+        
+        System.out.print("Käytössäsi on seuraavat laskutoimitukset:\n1: vähennyslasku\n2: yhteenlasku\n3: kertolasku\n4: jakolasku\n5: jakojäännös\n\n Valitse laskutoimitus: ");
+        
+        valinta = reader.nextInt();
+        
+        switch(valinta) {
+            case 1:
+                doCalc(1);
+                break;
+            case 2:
+                doCalc(2);
+                break;
+            case 3:
+                doCalc(3);
+                break;
+            case 4:
+                doCalc(4);
+                break;
+            case 5:
+                doCalc(5);
+                break;
+            default:
+                System.out.print("Laskutoimituksen valinta pitää olla välillä 1-5.");
+                break;
+        }
+                
+    }
+    
+    public static void doCalc(int operation){
+        java.util.Scanner reader = new java.util.Scanner(System.in);        
+        int x,y = 0;
+        
+        do {
+            System.out.print("Anna ensimmäinen luku: ");
+            x = reader.nextInt();
+            System.out.print("Anna toinen luku: ");
+            y = reader.nextInt();
+            
+        } while ( x == 0 || y == 0);
+        
+        switch(operation){
+            case 1:
+                System.out.println(x + " - " + y + " = " + (x - y));
+                break;
+            case 2:
+                System.out.print(x + " + " + y + " = " + (x + y));
+                break;
+            case 3:
+                System.out.print(x + " * " + y + " = " + (x * y));
+                break;
+            case 4:
+                System.out.print(x + " / " + y + " = " + ((double)x/y));
+                break;
+            case 5:
+                System.out.print(x + " % " + y + " = " + (x % y));
+                break;
+        }
+    }
+}
