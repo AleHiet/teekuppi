@@ -1,0 +1,51 @@
+// Tee ohjelma, joka piirtää näytölle suorakulmion annettujen syötteiden perusteella. Aluksi ohjelma kysyy käyttäjältä kokonaislukuna suorakulmion korkeuden ja leveyden. 
+// Tämän jälkeen ohjelma tulostaa ruudukon esimerkkitulostuksen mukaisesti. 
+// Jos annettu leveyden tai korkeuden arvo on pienempi kuin 1, tulostuu ilmoitus "Virheellinen leveyden tai korkeuden arvo!" ja kysytään korkeus ja leveys uudelleen.
+
+// Esimerkkitulostus: 
+Anna ruudukon korkeus: -3
+Anna ruudukon leveys: 3
+Virheellinen leveyden tai korkeuden arvo!
+Anna ruudukon korkeus: 6
+Anna ruudukon leveys: 4
+
+XXXX
+XXXX
+XXXX
+XXXX
+XXXX
+XXXX
+
+// Vastaus
+import java.util.Scanner;
+
+public class Silmukat {
+  public static void main(String[] args) {
+
+	  
+	  int leveys,korkeus = 0;
+	
+        
+        Scanner input = new Scanner(System.in);
+
+        do {
+            System.out.print("Anna ruudukon korkeus: ");
+            korkeus = input.nextInt();
+            System.out.print("Anna ruudukon leveys: ");
+            leveys = input.nextInt();
+          if (leveys < 1 || korkeus < 1 ) 
+      System.out.println("Virheellinen leveyden tai korkeuden arvo!");
+			
+        } while ( leveys <= 0 || korkeus <= 0);
+        System.out.println();
+        for (int i = 0; i < korkeus; i++) {
+            for (int j = 0; j < leveys; j++) {
+				
+                System.out.print("X");
+            }
+                System.out.print("\n");
+			input.close();
+        }
+        
+    }
+}
