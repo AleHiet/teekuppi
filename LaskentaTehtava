@@ -1,3 +1,11 @@
+// Tee laskinohjelma, jossa käyttäjä voi valita, mikä laskutoimitus suoritetaan. Ohjelma kysyy mikä laskutoimitus suoritetaan. 
+// Tämän jälkeen ohjelma kysyy kaksi kokonaislukua, suorittaa laskutoimituksen ja tulostaa saadun tuloksen. 
+// Laskutoimituksen valinta on tehtävä käyttämällä switch-lausetta. 
+// Jos käyttäjä antaa laskutoimitusta valitessa jonkin muun luvun kuin 1-5, tulostuu ilmoitus "Laskutoimituksen valinta pitää olla välillä 1-5." ja ohjelman suoritus loppuu. 
+// Kahta kokonaislukua ei siis kysytä, jos laskutoimituksen valinta ei ole 1-5.
+
+// Vastaus
+
 public class Laskenta {
     
     public static void main(String[] args) {
